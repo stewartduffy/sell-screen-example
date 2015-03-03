@@ -1,15 +1,21 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
-// var sass        = require('gulp-sass');
 var reload      = browserSync.reload;
-
-var compass = require('gulp-compass');
-var minifyCSS = require('gulp-minify-css');
+var uglify      = require('gulp-uglify');
+var concat      = require('gulp-concat');
+var compass     = require('gulp-compass');
+var minifyCSS   = require('gulp-minify-css');
 
 var src = {
     scss: 'app/scss/*.scss',
     css:  'app/css',
-    html: 'app/*.html'
+    html: 'app/*.html',
+    jsFiles: [
+    "app/js/angular.js",
+    "app/js/app.js",
+    "app/js/controllers/salesScreenCtrl.js",
+    "app/js/services/currencyCalc.js"
+    ]
 };
 
 // Static Server + watching scss/html files
@@ -34,6 +40,13 @@ gulp.task('compass', function() {
         .pipe(minifyCSS())
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
+});
+
+gulp.task('scripts', function() {
+    gulp.src(src.jsFiles)
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/dist/'));
 });
 
 gulp.task('default', ['serve']);

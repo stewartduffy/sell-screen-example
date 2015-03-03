@@ -4,8 +4,8 @@
  * - adds totals
  */
 
- angular.module('store')
-     .controller('SalesScreenController', function TodoCtrl($scope, CurrencyCalc) {
+angular.module('store')
+    .controller('SalesScreenController', ['$scope', 'CurrencyCalc', function($scope, CurrencyCalc) {
         'use strict';
 
         this.salesItems = [];
@@ -56,4 +56,4 @@
             return total.toFixed(2);
         };
 
-    });
+    }]);
