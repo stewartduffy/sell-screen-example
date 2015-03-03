@@ -1,78 +1,32 @@
 <!doctype html>
-<html lang="en-US">
+
+<html ng-app="store">
 <head>
     <meta charset="UTF-8">
-    <title>BrowserSync, Gulp + SASS Example</title>
+    <title>Vend Sales Screen Example</title>
     <link rel='stylesheet' href='css/base.css'>
 </head>
-<body>
+<body ng-controller="StoreController as store">
+
     <div class="wrapper">
 
         <div class="module-control control-full">
-            <button>Add Products</button>
+            <button ng-click="addSalesItem()">Add Products</button>
         </div>
 
         <div class="list-sales">
-            
             <table>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
+                    <tr ng-repeat="salesItem in store.salesItems">
+                        <td>{{salesItem.quantity}}</td>
+                        <td>{{salesItem.name}}</td>
+                        <td>{{salesItem.exclPrice}}</td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Eternal Teeshirt</td>
-                        <td>300.00</td>
-                    </tr>
-
-
-
-                    
                 </tbody>
             </table>
-
         </div><!-- end cart -->
 
-
-        <div class="checkout">
-            
+        <div class="checkout">    
             <table class="table table-striped">
                 <tbody>
                     <tr>
@@ -90,7 +44,6 @@
 
                 </tbody>
             </table>
-
         </div><!-- end tax -->
 
         <div class="module-control control-full">
@@ -101,5 +54,10 @@
     </div><!-- end wrapper -->
 
 
+
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+<!-- <script src="js/controllers/salesScreenCtrl.js"></script>
+ -->
 </body>
 </html>
