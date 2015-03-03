@@ -12,7 +12,7 @@ body {
 }
 
 .module-control { 
-    padding: 22px;
+    padding: $default-padding;
 }
 
 
@@ -27,7 +27,7 @@ body {
         width: 100%;
         background: $brand-color-primary;
         color: #fff;
-        padding: 22px;
+        padding: $default-padding;
         font-size: 18px;
         cursor: pointer;
         &:hover{
@@ -42,7 +42,7 @@ table {
     border-top: #EEEEEE solid 1px;
     border-bottom: #EEEEEE solid 1px;
     td {
-        padding: 22px 0;
+        padding: $default-padding 0;
     }
     tr:not(:last-child){
         td {
