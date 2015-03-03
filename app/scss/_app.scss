@@ -1,0 +1,57 @@
+
+body {
+    background: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper { 
+    width: 577px;
+    height: 842px;
+    margin: 20px auto;
+    background: #FAFAFA;
+}
+
+.module-control { 
+    padding: 22px;
+}
+
+
+.list-sales {
+    height: 480px;
+    overflow-y: auto;
+}
+
+.control-full {
+    button {
+        border: none;
+        width: 100%;
+        background: $vend-green;
+        color: #fff;
+        padding: 22px;
+        font-size: 18px;
+    }
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    border-top: #EEEEEE solid 1px;
+    border-bottom: #EEEEEE solid 1px;
+    td {
+        padding: 22px 0;
+    }
+    tr:not(:last-child){
+        td {
+            border-bottom: #EEEEEE solid 1px;
+        }
+    }
+}
+
+
+.checkout {
+    table {
+        td {
+            padding: 13px 0;
+        }
+    }
+}
