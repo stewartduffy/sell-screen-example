@@ -34,11 +34,11 @@ gulp.task('compass-dev', function() {
         .pipe(compass({
             sass: 'app/scss',
             css: src.css,
+            comments: true
         }))
         .on('error', function(err) {
             console.log(err);
         })
-        .pipe(minifyCSS())
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
 });
@@ -47,13 +47,13 @@ gulp.task('compass', function() {
     gulp.src(src.scss)
         .pipe(compass({
             sass: 'app/scss',
-            css: 'app/dist/css',
+            css: 'app/dist/css'
         }))
         .on('error', function(err) {
             console.log(err);
         })
         .pipe(minifyCSS())
-        .pipe(gulp.dest(src.css))
+        .pipe(gulp.dest('app/dist/css'))
         .pipe(reload({stream: true}));
 });
 

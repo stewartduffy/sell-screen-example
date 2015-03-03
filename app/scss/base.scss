@@ -1,12 +1,8 @@
 //Import vender
 @import "compass/reset";
 @import "compass/css3";
-// @import "compass/layout";
 @import "compass";
-// @import "compass/utilities/tables/scaffolding";
-
-
-@import "vars";
 
 //Import our styles
+@import "vars";
 @import "app";
