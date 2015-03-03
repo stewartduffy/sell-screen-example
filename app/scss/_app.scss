@@ -25,10 +25,14 @@ body {
     button {
         border: none;
         width: 100%;
-        background: $vend-green;
+        background: $brand-color-primary;
         color: #fff;
         padding: 22px;
         font-size: 18px;
+        cursor: pointer;
+        &:hover{
+            background: darken( $brand-color-primary, 10% );
+        }
     }
 }
 
