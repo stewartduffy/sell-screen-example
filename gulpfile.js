@@ -5,6 +5,7 @@ var uglify      = require('gulp-uglify');
 var concat      = require('gulp-concat');
 var compass     = require('gulp-compass');
 var minifyCSS   = require('gulp-minify-css');
+var minifyCSS   = require('gulp-copy');
 
 var src = {
     scss: 'app/scss/*.scss',
@@ -46,7 +47,15 @@ gulp.task('scripts', function() {
     gulp.src(src.jsFiles)
     .pipe(concat('app.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/dist/'));
+    .pipe(gulp.dest('app/dist/js/'));
 });
+
+gulp.task('copy', function() {
+    gulp.src('app/index.html')
+      .pipe(gulp.dest('app/dist/'));
+});
+
+
+gulp.task('build', ['scripts', 'copy']);
 
 gulp.task('default', ['serve']);
