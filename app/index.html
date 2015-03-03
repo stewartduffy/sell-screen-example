@@ -19,8 +19,9 @@
                 <tbody>
                     <tr ng-repeat="salesItem in store.salesItems">
                         <td>{{salesItem.quantity}}</td>
+                        <td>x</td>
                         <td>{{salesItem.name}}</td>
-                        <td>{{salesItem.exclPrice}}</td>
+                        <td>{{salesItem.inclPrice}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -31,15 +32,15 @@
                 <tbody>
                     <tr>
                         <td>Sub-total</td>
-                        <td>0.00</td>
+                        <td>{{ getExclTotal() }}</td>
                     </tr>
                     <tr>
                         <td>Tax (GST)</td>
-                        <td>0.00</td>
+                        <td>{{ getTaxTotal() }}</td>
                     </tr>
                     <tr>
                         <td>Total Price</td>
-                        <td>1570.00</td>
+                        <td>{{ getInclTotal() }}</td>
                     </tr>
 
                 </tbody>
