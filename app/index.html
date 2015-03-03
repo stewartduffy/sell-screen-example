@@ -6,9 +6,9 @@
     <title>Vend Sales Screen Example</title>
     <link rel='stylesheet' href='css/base.css'>
 </head>
-<body ng-controller="StoreController as store">
+<body>
 
-    <div class="wrapper">
+    <div class="wrapper" ng-controller="SalesScreenController as salesScreen">
 
         <div class="module-control control-full">
             <button ng-click="addSalesItem()">Add Products</button>
@@ -17,7 +17,7 @@
         <div class="list-sales">
             <table>
                 <tbody>
-                    <tr ng-repeat="salesItem in store.salesItems">
+                    <tr ng-repeat="salesItem in salesScreen.salesItems">
                         <td>{{salesItem.quantity}}</td>
                         <td>x</td>
                         <td>{{salesItem.name}}</td>
