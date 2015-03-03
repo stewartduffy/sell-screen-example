@@ -14,10 +14,27 @@
             newSalesItem.inclPrice = $scope.addGst(newSalesItem.exclPrice, newSalesItem.taxRate);
             newSalesItem.taxPrice = $scope.calculateGst(newSalesItem.exclPrice, newSalesItem.taxRate);
 
-
             $scope.store.salesItems.push(newSalesItem);
         };
 
+        $scope.resetSalesItems = function () {
+            var confirmMessage = "You are about to remove all the products from the cart!\r\n 'Cancel' to stop, 'OK' to continue.";
+            if ($scope.store.salesItems.length && window.confirm(confirmMessage)) {
+                $scope.store.salesItems = [];
+            }
+        };
+
+        $scope.addSalesItem = function () {
+            var newSalesItem = {
+                quantity: 1,
+                name: 'Eternal Teeshirt',
+                exclPrice: 260.86956,
+                taxRate: 0.15
+            };
+            newSalesItem.inclPrice = $scope.addGst(newSalesItem.exclPrice, newSalesItem.taxRate);
+            newSalesItem.taxPrice = $scope.calculateGst(newSalesItem.exclPrice, newSalesItem.taxRate);
+            $scope.store.salesItems.push(newSalesItem);
+        };
         
         $scope.calculateGst = function(price, taxRate) {
             return (price * (taxRate * 100) / 100).toFixed(2);
