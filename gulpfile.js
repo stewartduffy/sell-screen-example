@@ -9,8 +9,11 @@ var htmlreplace = require('gulp-html-replace');
  
 var src = {
     scss: 'app/scss/*.scss',
-    css:  'app/css',
-    html: 'app/*.html',
+    scssDir: 'app/scss',
+    cssDev:  'app/css',
+    cssBuild:  'app/dist/css',
+    html: 'app/index.html',
+    jsBuild:  'app/dist/js/',
     jsFiles: [
     "app/js/angular.js",
     "app/js/app.js",
@@ -32,28 +35,28 @@ gulp.task('serve', ['compass-dev'], function() {
 gulp.task('compass-dev', function() {
     gulp.src(src.scss)
         .pipe(compass({
-            sass: 'app/scss',
-            css: src.css,
+            sass: src.scssDir,
+            css: src.cssDev,
             comments: true
         }))
         .on('error', function(err) {
             console.log(err);
         })
-        .pipe(gulp.dest(src.css))
+        .pipe(gulp.dest(src.cssDev))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('compass', function() {
     gulp.src(src.scss)
         .pipe(compass({
-            sass: 'app/scss',
-            css: 'app/dist/css'
+            sass: src.scssDir,
+            css: src.cssBuild
         }))
         .on('error', function(err) {
             console.log(err);
         })
         .pipe(minifyCSS())
-        .pipe(gulp.dest('app/dist/css'))
+        .pipe(gulp.dest(src.cssBuild))
         .pipe(reload({stream: true}));
 });
 
@@ -61,11 +64,11 @@ gulp.task('scripts', function() {
     gulp.src(src.jsFiles)
     .pipe(concat('app.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/dist/js/'));
+    .pipe(gulp.dest(src.jsBuild));
 });
 
 gulp.task('copy', function() {
-    gulp.src('app/index.html')
+    gulp.src(src.html)
     .pipe(htmlreplace({
         'js': 'js/app.js'
     }))
