@@ -1,5 +1,12 @@
 #Sell Screen Example
 
+**Technologies used**:
+- Gulp for build & automation
+- BrowserSync for localserver, livereload & watch tasks to compile SCSS
+- SCSS / SMACSS: I used compass as to take advantage of the reset & CSS3 mixins
+- AngularJS: Good js MV* framework, and the brief stated I need to
+- SublimeLinter: Used as editor plugin to run JSHINT on any JS file when I save. This prevents stupid JS errors.  
+
 ## Installation/Usage:
 Simple example of a sell screen for a POS app.
 
