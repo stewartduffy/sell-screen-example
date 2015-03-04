@@ -1,3 +1,15 @@
+/* line 1, ../scss/_base.scss */
+body {
+  background: green;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+/* line 1, ../scss/_typography.scss */
+.muted-text {
+  color: #b3b3b3;
+}
+
 /* line 1, ../scss/layout/_desktop.scss */
 #sales-screen {
   width: 577px;
@@ -75,16 +87,4 @@
 /* line 6, ../scss/module/_product-list.scss */
 .product-list .list-table td:first-child {
   width: 25px;
-}
-
-/* line 13, ../scss/base.scss */
-body {
-  background: green;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-}
-
-/* line 19, ../scss/base.scss */
-.color-mute {
-  color: #b3b3b3;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Vend Sales Screen Example</title>
-    <link rel='stylesheet' href='css/base.css'>
+    <link rel='stylesheet' href='css/app.css'>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
                 <tbody>
                     <tr ng-repeat="salesItem in salesScreen.salesItems">
                         <td>{{salesItem.quantity}}</td>
-                        <td class="color-mute">x</td>
+                        <td class="muted-text">x</td>
                         <td>{{salesItem.name}}</td>
                         <td>{{salesItem.inclPrice}}</td>
                     </tr>
