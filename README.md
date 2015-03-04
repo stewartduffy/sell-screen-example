@@ -9,6 +9,7 @@ $ git clone https://github.com/stewartduffy/sell-screen-example.git
 ```
 
 **Step 2**: Install dependencies
+
 Make sure you are in root of project
 
 ```bash
