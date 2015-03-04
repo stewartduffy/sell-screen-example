@@ -31,3 +31,11 @@ $ npm install
 ```bash
 $ npm start
 ```
+
+**Step 5**: View project
+
+BrowserSync should open http://localhost:3000/
+
+**Step 6**: Live project
+
+http://stewartduffy.com/examples/pos
