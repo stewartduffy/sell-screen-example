@@ -4,9 +4,9 @@
 Simple example of a sell screen for a POS app.
 
 **Prerequisites**: 
-# Node: http://nodejs.org/download/
-# Ruby: https://www.ruby-lang.org/en/documentation/installation/
-# Compass: http://compass-style.org/install/
+- Node: http://nodejs.org/download/
+- Ruby: https://www.ruby-lang.org/en/documentation/installation/
+- Compass: http://compass-style.org/install/
 
 **Step 1**: Clone this repo
 ```bash
