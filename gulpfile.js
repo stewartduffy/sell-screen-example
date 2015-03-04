@@ -8,7 +8,7 @@ var minifyCSS   = require('gulp-minify-css');
 var htmlreplace = require('gulp-html-replace');
  
 var src = {
-    scss: 'app/scss/*.scss',
+    scss: 'app/scss/**/*.scss',
     scssDir: 'app/scss',
     cssDev:  'app/css',
     cssBuild:  'app/dist/css',
