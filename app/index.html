@@ -8,18 +8,18 @@
 </head>
 <body>
 
-    <div class="wrapper" ng-controller="SalesScreenController as salesScreen">
+    <div id="sales-screen" ng-controller="SalesScreenController as salesScreen">
 
-        <div class="module-control control-full">
-            <button ng-click="addSalesItem()">Add Products</button>
+        <div class="header">
+            <button class="btn" ng-click="addSalesItem()">Add Products</button>
         </div>
 
-        <div class="list-sales">
-            <table>
+        <div class="product-list">
+            <table class="list-table">
                 <tbody>
                     <tr ng-repeat="salesItem in salesScreen.salesItems">
                         <td>{{salesItem.quantity}}</td>
-                        <td>x</td>
+                        <td class="color-mute">x</td>
                         <td>{{salesItem.name}}</td>
                         <td>{{salesItem.inclPrice}}</td>
                     </tr>
@@ -28,7 +28,7 @@
         </div><!-- end cart -->
 
         <div class="checkout">    
-            <table class="table table-striped">
+            <table class="list-table list-table-condensed">
                 <tbody>
                     <tr>
                         <td>Sub-total</td>
@@ -39,16 +39,16 @@
                         <td>{{ getTaxTotal() }}</td>
                     </tr>
                     <tr>
-                        <td>Total Price</td>
-                        <td>{{ getInclTotal() }}</td>
+                        <td><strong>Total Price</strong></td>
+                        <td><strong>{{ getInclTotal() }}</strong></td>
                     </tr>
 
                 </tbody>
             </table>
         </div><!-- end tax -->
 
-        <div class="module-control control-full">
-            <button ng-click="resetSalesItems()">Boomshakalaka</button>
+        <div class="footer">
+            <button class="btn-rounded btn" ng-click="resetSalesItems()">Boomshakalaka</button>
         </div>
     </div><!-- end wrapper -->
 
