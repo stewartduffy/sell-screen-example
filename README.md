@@ -1,5 +1,7 @@
 #Sell Screen Example
 
+Simple example of a sell screen for a POS app.
+
 ##Technologies used:
 - Gulp for build & automation
 - BrowserSync for localserver, livereload & watch tasks to compile SCSS
@@ -8,7 +10,6 @@
 - SublimeLinter: Used as editor plugin to run JSHINT on any JS file when I save. This prevents stupid JS errors.  
 
 ### Installation/Usage:
-Simple example of a sell screen for a POS app.
 
 **Prerequisites**: 
 - Node: http://nodejs.org/download/
