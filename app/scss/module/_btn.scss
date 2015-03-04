@@ -1,0 +1,16 @@
+.btn {
+    padding: $default-padding;
+    width: 100%;
+    border: none;
+    background: $brand-color-primary;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover{
+        background: darken( $brand-color-primary, 10% );
+    }
+}
+
+.btn-rounded {
+    @include border-radius(4px);
+}

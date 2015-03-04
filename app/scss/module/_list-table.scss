@@ -1,0 +1,27 @@
+.list-table {
+    width: 100%;
+    border-top: #EEEEEE solid 1px;
+    border-bottom: #EEEEEE solid 1px;
+    background: #fff;
+    td {
+        padding: $default-padding 0;
+    }
+    td:first-child{
+        padding-left: $default-padding;
+    }
+    td:last-child{
+        padding-right: $default-padding;
+        text-align: right;
+    }
+    tr:not(:last-child){
+        td {
+            border-bottom: #EEEEEE solid 1px;
+        }
+    }
+    &.list-table-condensed {
+        td {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+    }
+}

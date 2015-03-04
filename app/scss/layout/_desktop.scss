@@ -1,0 +1,10 @@
+#sales-screen { 
+    width: 577px;
+    margin: 20px auto;
+    background: #FAFAFA;
+    @include display-flex;
+    @include flex-direction(column);
+    .header, .footer {
+        padding: $default-padding;    
+    }
+}

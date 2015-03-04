@@ -1,8 +1,21 @@
 //Import vender
-@import "compass/reset";
-@import "compass/css3";
+// @import "compass/reset";
+// @import "compass/css3";
 @import "compass";
 
 //Import our styles
-@import "vars";
-@import "app";
+@import "site-settings";
+@import "layout/desktop";
+@import "module/btn";
+@import "module/list-table";
+@import "module/product-list";
+
+body {
+    background: green;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $text-color;
+}
+
+.color-mute { 
+    color: $text-color-mute;
+}

@@ -1,0 +1,10 @@
+.product-list {
+    height: 480px;
+    overflow-y: auto;
+    @include flex(2 1 30em);
+    .list-table {
+        td:first-child{
+            width: 25px;
+        }
+    }
+}
