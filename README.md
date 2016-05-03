@@ -46,4 +46,5 @@ BrowserSync should open http://localhost:3000/
 
 **Step 6**: Live project
 
-http://stewartduffy.com/examples/pos
+~~http://stewartduffy.com/examples/pos~~
+Does not live there anymore. Clone repo to see...
